@@ -39,5 +39,7 @@ public class CustomListItemAdapter extends ArrayAdapter<String> {
 		
 		return view;
 	}
+	
+	
 
 }

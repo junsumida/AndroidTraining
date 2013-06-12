@@ -156,4 +156,35 @@
             android:text="@string/dot" />
     </LinearLayout>
 
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+                <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="3.21"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:text="dflnaslfn/laehvvbdepvjepvjepvffofjwpfjoifowjfpoifnofjwosifnionvaenvohnevnvoenvjeovdevnesovnevdflnaslfn/laehvvbdepvjepvjepvffofjwpfjoifowjfpoifnofjwosifnionvaenvohnevnvoenvjeovdevnesovnevdflnaslfn/laehvvbdepvjepvjepvffofjwpfjoifowjfpoifnofjwosifnionvaenvohnevnvoenvjeovdevnesovnevdflnaslfn/laehvvbdepvjepvjepvffofjwpfjoifowjfpoifnofjwosifnionvaenvohnevnvoenvjeovdevnesovnevdflnaslfn/laehvvbdepvjepvjepvffofjwpfjoifowjfpoifnofjwosifnionvaenvohnevnvoenvjeovdevnesovnevdflnaslfn/laehvvbdepvjepvjepvffofjwpfjoifowjfpoifnofjwosifnionvaenvohnevnvoenvjeovdevnesovnevdflnaslfn/laehvvbdepvjepvjepvffofjwpfjoifowjfpoifnofjwosifnionvaenvohnevnvoenvjeovdevnesovnev" >
+
+        <requestFocus />
+    </EditText>
+
+                <Button
+            android:id="@+id/dot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/dot" />
+                
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

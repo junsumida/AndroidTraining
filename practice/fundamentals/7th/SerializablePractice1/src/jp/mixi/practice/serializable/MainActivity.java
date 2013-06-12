@@ -15,6 +15,7 @@ public class MainActivity extends Activity {
         // 各項目を画面に表示してください
         NetworkClient client = new NetworkClient();
         String user = client.getUser(123);
+        User userdata = new User();
 
     }
 

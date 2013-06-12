@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">MyResource</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="konnichiwa">こんにちわ</string>
+    <string name="hoge">ほげ</string>
+    <string name="moge">もげ</string>
+    <string name="boge">ぼげ</string>
+    <string name="hoge_strong">ほげげ！！！</string>
+    <string name="format1">私は、%1$s個のりんごを持っています。</string>
+    <string name="format2">私は、%1$s個のりんごと、%2$s個のにんじんを持っています。</string>
+    
+</resources>

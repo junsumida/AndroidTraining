@@ -9,18 +9,64 @@
     tools:context=".MainActivity" >
 
     <!-- Button1 の右に 2 つボタンを並べて均等割付する -->
-    <Button
-        android:id="@+id/Button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1"/>
+
 
     <!-- Button4 の右に、縦に 2 つのボタンを並べる -->
     <!-- Button4 の大きさは、縦に 2 つ並べたボタン分の高さに合わせる -->
+
+    <LinearLayout
+        android:id="@+id/LL1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/Button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="3" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/Button4"
         android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/LL1"
+        android:layout_alignLeft="@+id/LL1"
+        android:layout_alignTop="@+id/button5"
+        android:layout_alignBottom="@+id/button6"
+        android:text="4" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Button1"
-        android:text="4"/>
+        android:layout_alignRight="@+id/LL1"
+        android:layout_below="@+id/LL1"
+        android:layout_toRightOf="@+id/Button4"
+        android:text="5" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/LL1"
+        android:layout_below="@+id/button5"
+        android:layout_toRightOf="@+id/Button4"
+        android:text="6" />
+
 </RelativeLayout>

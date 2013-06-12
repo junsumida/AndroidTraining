@@ -5,5 +5,84 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right" >
+
+            <FrameLayout
+                android:id="@+id/FL1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="4dp"
+                android:background="#DDDDDD"
+                android:padding="4dp" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:background="#FFFFFF"
+                    android:src="@drawable/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ドロイド君の画像ファイル"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="res/ic_launcher.png"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="13sp"
+                    android:layout_marginLeft="103dp"
+                    android:layout_marginTop="25dp"
+                />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/FL1"
+                android:background="#DDDDDD"
+                android:padding="4dp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:text="xhdpi"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="#aaaaaa"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="12,516 bytes"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#666666" />
+                
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

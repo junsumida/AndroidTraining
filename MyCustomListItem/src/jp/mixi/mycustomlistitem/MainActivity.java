@@ -6,8 +6,10 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -25,7 +27,7 @@ public class MainActivity extends Activity {
 			list.add("hoge" + i);
 		}
 		
-		ListView listView = (ListView) findViewById(R.id.ListView);
+		final ListView listView = (ListView) findViewById(R.id.ListView);
 		CustomListItemAdapter adapter = new CustomListItemAdapter(mActivity, list);
 		
 		listView.setAdapter(adapter);
@@ -41,6 +43,16 @@ public class MainActivity extends Activity {
 				
 			}
 			
+		});
+		
+		Button button = (Button) findViewById(R.id.button1);
+		button.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View view) {
+				// TODO Auto-generated method stub
+				listView.smoothScrollToPosition(0);
+			}
 		});
 	}
 

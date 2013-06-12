@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
@@ -15,15 +16,16 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         // AsyncTask のインスタンスを生成し、非同期処理を実行する
+    	Log.v("onCreate", "onCreate executed.");
         new MyAsyncTask().execute();
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    	getMenuInflater().inflate(R.menu.main, menu);
+    	return true;
     }
-
+ 
     /**
      * 非同期処理を実行するためのネストクラス。
      * Activity などのライフサイクルに合わせた管理は自分でする必要があるが、
@@ -59,7 +61,10 @@ public class MainActivity extends Activity {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                publishProgress();
+            	//Log.v("doInBackground", "doInBackground Started.");
+            	//Log.v("Thread", Thread.currentThread().toString());
+            	//Log.v("Thread", Thread.currentThread().toString());
+				publishProgress();
                 Thread.sleep(2000L);
                 publishProgress();
                 Thread.sleep(2000L);
@@ -70,6 +75,8 @@ public class MainActivity extends Activity {
                 publishProgress();
                 Thread.sleep(2000L);
                 publishProgress();
+                Thread.sleep(2000L);
+				//textView.setText("doing in background done!!!");
             } catch (InterruptedException e) {
                 Log.e(MyAsyncTask.class.getSimpleName(), "thread interrupted: ", e);
             }
@@ -84,6 +91,8 @@ public class MainActivity extends Activity {
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
             Toast.makeText(MainActivity.this, "onPostExecute", Toast.LENGTH_SHORT).show();
+        	TextView textView = (TextView) findViewById(R.id.hello);
+			textView.setText("doing in background!!");
         }
     }
 }

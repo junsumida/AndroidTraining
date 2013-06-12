@@ -22,6 +22,78 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+                <activity
+            android:name="jp.mixi.practice.intent.beg.HogeActivity"
+            android:label="@string/app_name" >
+            <!-- 画像を共有する Action のための Intent Filter 宣言 -->
+            <intent-filter>
+                <!-- ACTION_SEND または ACTION_SEND_MULTIPLE のいずれかを受け取る -->
+                <!-- Intent に設定可能な Action は 1 つだけなので、<intent-filter> に Action を複数宣言すると -->
+                <!-- その中からいずれかに該当するものを受け取る、という意味になる -->
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <!-- 暗黙的 Intent を扱う際に必須のカテゴリ -->
+                <!-- システムは、Activity の起動に暗黙的 Intent を発行すると、 -->
+                <!-- このカテゴリが付与されているものとして扱うため、Activity で暗黙的 Intent を受け取りたい場合は -->
+                <!-- 必ずこのカテゴリを <intent-filter> に宣言しておく -->
+                <!-- 複数のカテゴリを <intent-filter> に宣言した場合は、 -->
+                <!-- 全てのカテゴリにマッチするもののみを受け取る、という意味になる -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- Data の種類の制限 -->
+                <!-- MIME タイプのほか、URI のスキームを制限することもできる -->
+                <data android:mimeType="image/jpeg" />
+            </intent-filter>
+        </activity>
+                <activity
+            android:name="jp.mixi.practice.intent.beg.NewActivity2"
+            android:label="@string/app_name" >
+            <!-- 画像を共有する Action のための Intent Filter 宣言 -->
+            <intent-filter>
+                <!-- ACTION_SEND または ACTION_SEND_MULTIPLE のいずれかを受け取る -->
+                <!-- Intent に設定可能な Action は 1 つだけなので、<intent-filter> に Action を複数宣言すると -->
+                <!-- その中からいずれかに該当するものを受け取る、という意味になる -->
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <!-- 暗黙的 Intent を扱う際に必須のカテゴリ -->
+                <!-- システムは、Activity の起動に暗黙的 Intent を発行すると、 -->
+                <!-- このカテゴリが付与されているものとして扱うため、Activity で暗黙的 Intent を受け取りたい場合は -->
+                <!-- 必ずこのカテゴリを <intent-filter> に宣言しておく -->
+                <!-- 複数のカテゴリを <intent-filter> に宣言した場合は、 -->
+                <!-- 全てのカテゴリにマッチするもののみを受け取る、という意味になる -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- Data の種類の制限 -->
+                <!-- MIME タイプのほか、URI のスキームを制限することもできる -->
+                <data android:mimeType="image/jpeg" />
+            </intent-filter>
+        </activity>
+                        <activity
+            android:name="jp.mixi.practice.intent.beg.NewActivity3"
+            android:label="@string/app_name" >
+            <!-- 画像を共有する Action のための Intent Filter 宣言 -->
+            <intent-filter>
+                <!-- ACTION_SEND または ACTION_SEND_MULTIPLE のいずれかを受け取る -->
+                <!-- Intent に設定可能な Action は 1 つだけなので、<intent-filter> に Action を複数宣言すると -->
+                <!-- その中からいずれかに該当するものを受け取る、という意味になる -->
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+                <!-- 暗黙的 Intent を扱う際に必須のカテゴリ -->
+                <!-- システムは、Activity の起動に暗黙的 Intent を発行すると、 -->
+                <!-- このカテゴリが付与されているものとして扱うため、Activity で暗黙的 Intent を受け取りたい場合は -->
+                <!-- 必ずこのカテゴリを <intent-filter> に宣言しておく -->
+                <!-- 複数のカテゴリを <intent-filter> に宣言した場合は、 -->
+                <!-- 全てのカテゴリにマッチするもののみを受け取る、という意味になる -->
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <!-- Data の種類の制限 -->
+                <!-- MIME タイプのほか、URI のスキームを制限することもできる -->
+                <data android:mimeType="image/jpeg" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

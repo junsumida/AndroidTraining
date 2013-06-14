@@ -157,19 +157,20 @@
                     />
         </FrameLayout>
 
-        <LinearLayout
+        <RelativeLayout
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 android:background="@drawable/frame"
                 android:id="@+id/linearLayout">
 
             <FrameLayout
-                    android:layout_width="0dp"
+                    android:layout_width="80dp"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1"
+                    android:layout_alignParentLeft="true"
                     android:background="@drawable/frame"
+                    android:id="@+id/leftButton"
                     android:paddingTop="5dp">
                 <ImageView
                         android:id="@+id/droid1"
@@ -186,7 +187,9 @@
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:text="メニュー"
                         android:id="@+id/menu"
-                        android:layout_gravity="center_horizontal|bottom"/>
+                        android:layout_gravity="center_horizontal|bottom"
+                        android:layout_marginBottom="5dp"
+                        />
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -200,10 +203,12 @@
                         />
             </FrameLayout>
             <FrameLayout
-                    android:layout_width="0dp"
+                    android:layout_toRightOf="@+id/leftButton"
+                    android:layout_toLeftOf="@+id/rightButton"
+                    android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_weight="2"
                     android:background="@drawable/frame"
+                    android:id="@+id/centerButton"
                     >
                 <TextView
                         android:layout_width="wrap_content"
@@ -218,10 +223,11 @@
                         />
             </FrameLayout>
             <FrameLayout
-                    android:layout_width="0dp"
+                    android:id="@+id/rightButton"
+                    android:layout_width="80dp"
                     android:layout_height="fill_parent"
-                    android:layout_weight="1"
                     android:background="@drawable/frame"
+                    android:layout_alignParentRight="true"
                     >
                 <ImageView
                         android:id="@+id/droid3"
@@ -238,7 +244,7 @@
                         android:id="@+id/recent"
                         android:layout_gravity="center_horizontal|bottom"/>
             </FrameLayout>
-        </LinearLayout>
+        </RelativeLayout>
 
     </RelativeLayout>
 

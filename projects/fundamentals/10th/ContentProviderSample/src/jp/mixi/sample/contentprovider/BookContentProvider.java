@@ -1,4 +1,3 @@
-
 package jp.mixi.sample.contentprovider;
 
 import android.content.ContentProvider;

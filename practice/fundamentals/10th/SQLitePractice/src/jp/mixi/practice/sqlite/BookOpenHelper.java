@@ -12,13 +12,13 @@ public class BookOpenHelper extends SQLiteOpenHelper {
 
     // データーベースのバージョン
     // データベーススキーマを変える場合は、バージョンを上げること
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     public static final String DATABASE_NAME = "Sample.db";
 
     private static final String BOOK_TABLE_CREATE =
             "CREATE TABLE " + Book.BOOK_TABLE_NAME + " (" +
-                    Book._ID + " INTEGER PRIMARY KEY," +
+                    Book._ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                     Book.COLUMN_NAME_BOOK_TITLE + " TEXT NOT NULL, " +
                     Book.COLUMN_NAME_BOOK_PUBLISHER + " TEXT, " +
                     Book.COLUMN_NAME_BOOK_PRICE + " TEXT);";
